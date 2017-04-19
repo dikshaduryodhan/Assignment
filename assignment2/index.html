@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+<style>
+      
+        label{
+             display:block;        
+             padding:10px;
+            margin:auto;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            text-align:center;
+              }
+  
+
+       span{
+
+            display:inline-block;
+           padding:10px;
+         text-align:center;
+           }
+
+
+         button{
+                display:inline-block;
+               padding:10px;
+               text-align:center;
+               background-color:green;
+               color:white;
+               font-size:20px; 
+               width:100px;
+               
+                }
+
+         button:hover{
+                    background-color:lightblue;
+               color:white; 
+               
+
+                     }       
+         
+         div{
+              border:red solid 1px;
+               text-align:center;
+               padding:10px;
+            margin:auto;
+            height:300px;
+            width:400px;
+            border-radius:20px;
+            background-color:gray;
+              }
+
+
+</style>
+
+</head>
+<body>
+
+<center><h1>Form</h1></center>
+
+<div>
+    <form 
+    onsubmit="return addinfo()" >
+      
+    
+     <label >
+           <span>Current City</span>
+         <input id="ds" type="text">
+     </label>
+
+    <label >
+           <span>Nearest Path</span>  
+            <select name="Path">
+                <option value="Thane">Thane</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Chandrapur">Chandrapur</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Akola">Akola</option>
+                <option value="Kolhapur">Kolhapur</option>
+                <option value="MP">MP</option>
+                <option value="Gondia">Gondia</option>
+     </label>
+
+
+    <label>
+        <span></span>
+        <button onclick="addinfo()">Submit</button>
+    </label>
+
+     <!-- end of form-->
+</form>
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+ 
+</div>
+<!-- addinding javascript -->
+
+<script src="js/jquery.js"></script>
+             <script>
+              // function 
+              function addinfo()
+              {
+                 var ds = $('#ds').val();
+               
+         //chack condition
+            if(ds.length==0)
+            {
+               
+         alert("please insertdescription first!!!!");//display alert.
+         return false;
+            }       
+         return true;
+              }
+
+      </script>
+
+</body>
+</html>
